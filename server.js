@@ -7,13 +7,15 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 const database = require("./db/connection");
-app.use(require("./routes/records"));
- 
-app.use(cors());
 
 // Configuring body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use(require("./routes/records"));
+ 
+app.use(cors());
+
 
 app.use(function (err, _req, res) {
   console.error(err.stack);
