@@ -29,7 +29,6 @@ recordRoutes.route('/fetch/records').post(function (req, res) {
           },
         });
       }  
-    console.info('print post request:', req.body);
     dbConnect
       .collection('records')
       .aggregate(aggregationQuery)
