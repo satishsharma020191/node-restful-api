@@ -17,7 +17,7 @@ This API gives the records in response based on your startDate, endDate, minCoun
 #### fetch records
 
 ```http
-  POST /fetch/records
+  POST https://node-restful-api-getir.herokuapp.com/fetch/records
 ```
 
 | Parameter | Type     | Description                       |
